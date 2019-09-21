@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Paint</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="js.js" type="text/javascript" defer></script>
+    </head>
+    <body>
+        <div class="color-section">
+            <label for="color">Color:</label>
+            <input type="color" id="color" class="color">
+        </div>
+        <div class="size-section">
+            <label for="size">Size:</label>
+            <div class="size small selected" data-size="5"></div>
+            <div class="size middle" data-size="10"></div>
+            <div class="size big" data-size="15"></div>
+        </div>
+        <div class="field-section">
+            <canvas id="field" class="field"></canvas>
+        </div>
+        <div class="input-section">
+            <input class="btn save" type="button" value="Сохранить">
+            <input class="btn clear" type="button" value="Очистить">
+        </div>
+    </body>
+</html>
