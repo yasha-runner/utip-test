@@ -23,8 +23,9 @@ setInterval(checkedSave, 1000);
 
 function checkedSave() { // Функция проверяет изменился ли рисунок на одной из вкладок
     if (check != localStorage['change']) {
-        savePicture(generationNamePicture()); // Сохраняем текущие рисунки на всех вкладках
-        drawPictire('clone') // Рисуем рисунок, который был сохранён, на всех вкладках
+        // savePicture(generationNamePicture()); // Сохраняем текущие рисунки на всех вкладках
+        // drawPictire('clone') // Рисуем рисунок, который был сохранён, на всех вкладках
+        drawPictire(getNamePicture()); // Рисуем рисунок, который был сохранён, на всех вкладках
         check = localStorage['change'];
     }
 }
@@ -65,7 +66,8 @@ clear.addEventListener('click', function() { // Клик 'очистить'
 });
 
 save.addEventListener('click', function() { // Клик 'сохранить'
-    localStorage.setItem('clone', field.toDataURL());
+    // localStorage.setItem('clone', field.toDataURL());
+    savePicture(generationNamePicture()); // Сохраняем рисунок в localStorage
     if ((localStorage['change'] === undefined) || (localStorage['change'] == 0)) {
         localStorage['change'] = 1;
     } else {
